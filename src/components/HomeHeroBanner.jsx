@@ -37,7 +37,7 @@ const HomeHeroBanner = ({ theme = "light" }) => {
   const animateSlideChange = (nextSlideIndex) => {
     const tl = gsap.timeline();
 
-    // Fade out current content
+    // Fade out current content (hide entire container)
     tl.to(contentRef.current, {
       opacity: 0,
       y: -20,
@@ -61,14 +61,37 @@ const HomeHeroBanner = ({ theme = "light" }) => {
       duration: 0.8
     }, 0.4);
 
-    // Fade in new content with stagger
-    tl.to(contentRef.current, {
+    // Reset parent container visibility before children stagger
+    tl.set(contentRef.current, { opacity: 1, y: 0 }, 0.5);
+
+    // Fade in new content children with stagger
+    tl.fromTo(contentRef.current.children, {
+      opacity: 0,
+      y: 20
+    }, {
       opacity: 1,
       y: 0,
       duration: 0.8,
+      stagger: 0.15,
       ease: "power2.out"
     }, 0.6);
   };
+
+  // Initial Load Animation
+  useEffect(() => {
+    const tl = gsap.timeline();
+    // Ensure parent is visible immediately so children's stagger is seen
+    gsap.set(contentRef.current, { opacity: 1 });
+    
+    tl.fromTo(imageRef.current, 
+      { opacity: 0, scale: 1.05 }, 
+      { opacity: 1, scale: 1, duration: 1.5, ease: "power2.out" }, 0
+    );
+    tl.fromTo(contentRef.current.children, 
+      { opacity: 0, y: 30 }, 
+      { opacity: 1, y: 0, duration: 0.8, stagger: 0.2, ease: "power2.out" }, 0.5
+    );
+  }, []);
 
   // Auto-play functionality (continuous rotation every 4 seconds)
   useEffect(() => {
