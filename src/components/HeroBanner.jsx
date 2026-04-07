@@ -50,7 +50,7 @@ const HeroBanner = ({
       </div>
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-5xl w-full px-2">
+      <div className="relative z-10 max-w-4xl w-full px-4 sm:px-6 md:px-8 lg:px-10">
         <motion.div
            initial={{ opacity: 0, scale: 0.9 }}
            animate={{ opacity: 1, scale: 1 }}

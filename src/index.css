@@ -20,6 +20,13 @@
   --primary: #ffffff;
 }
 
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   color: var(--text-main);
@@ -148,4 +155,13 @@ h1, h2, h3, h4, h5, h6 {
   .menu-icon {
     display: block;
   }
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }

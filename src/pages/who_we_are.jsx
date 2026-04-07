@@ -38,11 +38,11 @@ const WhoWeAre = () => {
     <div className={`overflow-x-hidden min-h-screen transition-colors duration-500 bg-transparent ${theme === 'dark' ? 'text-green-50' : 'text-black'}`}>
 
       <HeroBanner
-        title="Our Vision &"
-        subtitle="Unshakable Mission"
-        highlight="JodTech — Who We Are"
+        title="Engineering the"
+        subtitle="Future of Tech"
+        highlight="JodTech — Identity"
         theme={theme}
-        image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200"
+        image="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       />
 
       <div className="max-w-7xl mx-auto px-6 py-24 space-y-32">
@@ -54,9 +54,9 @@ const WhoWeAre = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight">Fueling Corporate Momentum</h2>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight">Driving Global Scale & Intelligence</h2>
             <p className={`text-xl leading-relaxed font-medium ${theme === 'dark' ? 'text-gray-400' : 'text-black'}`}>
-              We started with a simple belief: that technology should be an ally, not a hurdle. Since our inception, we've focused on helping companies outpace their competitors through advanced engineering and data-driven insights.
+              At JodTech, we don't just build software; we architect the foundation of your digital success. By blending rigorous engineering talent with cutting-edge technologies like AI, Cloud, and scalable frameworks, we equip modern enterprises to outmaneuver the competition. Our core philosophy is anchored in transparency, speed of execution, and an unrelenting pursuit of excellence.
             </p>
           </motion.div>
           <motion.div
@@ -66,9 +66,9 @@ const WhoWeAre = () => {
             className="relative"
           >
             <img
-              src="https://images.unsplash.com/photo-1542744094-24638eff58bb?q=80&w=1000"
+              src="https://images.unsplash.com/photo-1639664810686-b817b22bb549?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="team"
-              className="rounded-[3rem] shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 h-[600px] object-cover"
+              className="rounded-[3rem] shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 h-[300px] sm:h-[420px] md:h-[520px] lg:h-[600px] w-full object-cover"
             />
           </motion.div>
         </div>

@@ -46,7 +46,7 @@ const NewArrivals = () => {
       />
 
       <div className="max-w-7xl mx-auto px-6 py-24">
-        <div className="grid lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {blogs.map((blog, i) => (
             <motion.article
               key={i}

@@ -31,7 +31,7 @@ const industries = [
   {
     name: "Manufacturing",
     desc: "Automation and efficiency-driven industrial IoT and ERP solutions.",
-    img: "https://images.unsplash.com/photo-1553152531-b98a2fc8d3bf?q=80&w=1000",
+    img: "https://images.unsplash.com/photo-1581093206409-01076de81a1b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
@@ -77,7 +77,7 @@ const Industries = () => {
                    onClick={() => setActiveIndex(index)}
                    className={`text-left whitespace-nowrap md:whitespace-normal px-6 py-4 md:p-6 rounded-full transition-all duration-300 font-bold text-base md:text-lg relative
                    ${isActive
-                     ? (theme === 'dark' ? 'bg-transparent text-black-50' : 'bg-transparent text-green-600')
+                     ? (theme === 'dark' ? 'bg-transparent text-green-50' : 'bg-transparent text-green-600')
                      : (theme === 'dark' ? 'text-green-600 hover:text-gray-200 bg-transparent' : 'text-green-600 hover:text-green-900 bg-transparent')}`}
                  >
                    {item.name}

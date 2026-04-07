@@ -150,7 +150,7 @@ const Apply = () => {
         image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200"
       />
 
-      <section className="max-w-4xl mx-auto px-6 py-24">
+      <section className="max-w-5xl mx-auto px-6 py-16 md:py-20">
         {submitted ? (
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
@@ -168,7 +168,7 @@ const Apply = () => {
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className={`p-10 md:p-20 rounded-[4rem] shadow-2xl transition-colors duration-500
+            className={`p-8 md:p-16 rounded-[4rem] shadow-2xl transition-colors duration-500
             ${theme === 'dark' ? 'bg-white/5' : 'bg-white border border-black/5'}`}
           >
             <div className="text-center mb-16">
@@ -247,7 +247,7 @@ const Apply = () => {
                   whileTap={{ scale: 0.98 }}
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full py-6 rounded-full font-black text-2xl shadow-2xl transition-all flex items-center justify-center gap-4 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}
+                  className={`w-full py-6 rounded-full font-black text-1xl shadow-2xl transition-all flex items-center justify-center gap-4 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}
                   ${theme === 'dark' ? 'bg-green-600 text-white hover:bg-dg-600' : 'bg-green-600 text-white hover:bg-dg-600'}`}
                 >
                   {isSubmitting ? "Dispatching..." : <>Dispatch Application <FiSend /></>}
