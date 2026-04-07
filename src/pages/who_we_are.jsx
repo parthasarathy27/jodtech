@@ -38,11 +38,11 @@ const WhoWeAre = () => {
     <div className={`overflow-x-hidden min-h-screen transition-colors duration-500 bg-transparent ${theme === 'dark' ? 'text-green-50' : 'text-black'}`}>
 
       <HeroBanner
-        title="Architecting Digital Futures"
-        subtitle="Through Code & Innovation"
-        highlight="JodTech Software Solutions"
+        title="Our Vision &"
+        subtitle="Unshakable Mission"
+        highlight="JodTech — Who We Are"
         theme={theme}
-        image="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070"
+        image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200"
       />
 
       <div className="max-w-7xl mx-auto px-6 py-24 space-y-32">
@@ -54,24 +54,21 @@ const WhoWeAre = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
-              Engineering <span className="text-green-600">Next-Gen</span> Software
-            </h2>
-            <p className={`text-xl leading-relaxed font-medium ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-              We are a team of visionary software engineers and product strategists. At JodTech, we don't just write code; we craft scalable, robust, and beautiful software platforms that propel businesses into the digital vanguard. From cutting-edge cloud architectures to intuitive mobile applications, we transform complex problems into elegant solutions.
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight">Fueling Corporate Momentum</h2>
+            <p className={`text-xl leading-relaxed font-medium ${theme === 'dark' ? 'text-gray-400' : 'text-black'}`}>
+              We started with a simple belief: that technology should be an ally, not a hurdle. Since our inception, we've focused on helping companies outpace their competitors through advanced engineering and data-driven insights.
             </p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative group"
+            className="relative"
           >
-            <div className="absolute inset-0 bg-green-600/10 rounded-[3rem] group-hover:bg-transparent transition-colors duration-700 z-10" />
             <img
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000"
+              src="https://images.unsplash.com/photo-1542744094-24638eff58bb?q=80&w=1000"
               alt="team"
-              className="rounded-[3rem] shadow-2xl grayscale group-hover:grayscale-0 group-hover:scale-[1.02] transition-all duration-700 h-[300px] sm:h-[420px] md:h-[520px] lg:h-[600px] w-full object-cover"
+              className="rounded-[3rem] shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 h-[600px] object-cover"
             />
           </motion.div>
         </div>

@@ -6,21 +6,21 @@ import { Link } from "react-router-dom";
 const HomeHeroBanner = ({ theme = "light" }) => {
   const slides = [
     {
-      image: "https://images.unsplash.com/photo-1621111848501-8d3634f82336?q=80&w=1265&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "https://images.unsplash.com/photo-1647514422086-18cde746fa26?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       highlight: "Next-Gen IT Solutions",
       title: "Engineering",
       subtitle: "Digital Success",
       description: "Partner with JodTech to accelerate your digital trajectory through high-precision engineering."
     },
     {
-      image: "https://images.unsplash.com/photo-1627634771521-9754fe2bc49b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGVhbSUyMG1lZXRpbmclMjBkaXNjdXNzJTIwd2l0aCUyMGdpdHxlbnwwfHwwfHx8Mg%3D%3D",
+      image: "https://images.unsplash.com/photo-1770169272345-9636d5ef2681?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       highlight: "Collaborative Innovation",
       title: "Transforming",
       subtitle: "Business Ideas",
       description: "Our talented teams bring diverse perspectives to create groundbreaking technology."
     },
     {
-      image: "https://images.unsplash.com/photo-1611241893603-3c359704e0ee?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "https://plus.unsplash.com/premium_photo-1751891494799-c794fa5e7c94?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       highlight: "Enterprise Excellence",
       title: "Securing",
       subtitle: "Your Digital Future",
@@ -124,7 +124,7 @@ const HomeHeroBanner = ({ theme = "light" }) => {
       {/* CONTENT - Animated */}
       <div
         ref={contentRef}
-        className="relative z-10 max-w-4xl w-full px-4 sm:px-6 md:px-8 lg:px-10 opacity-0"
+        className="relative z-10 max-w-5xl w-full px-2 opacity-0"
       >
         {/* Badge/Highlight */}
         <div className="inline-block px-3 md:px-4 py-1.5 mb-4 md:mb-8 text-xs md:text-sm font-black tracking-widest rounded-full uppercase bg-dg-700/30 text-green-50 backdrop-blur-md border border-dg-700/50">

@@ -19,7 +19,7 @@ const Careers = () => {
         subtitle="that defines tomorrow."
         highlight="Join the Revolution"
         theme={theme}
-        image="https://images.unsplash.com/photo-1629904853716-f0bc54eea481?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8am9ifGVufDB8fDB8fHwy"
+        image="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200"
       />
 
       {/* ================= PROGRAMS GRID ================= */}
@@ -104,7 +104,7 @@ const Careers = () => {
           >
             <img 
               src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1000" 
-              className="rounded-[4rem] shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700 h-[300px] sm:h-[420px] md:h-[520px] lg:h-[650px] w-full object-cover"
+              className="rounded-[4rem] shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700 h-[650px] object-cover"
             />
           </motion.div>
         </div>

@@ -9,14 +9,14 @@ const Footer = () => {
 
   const socialLinks = [
     { icon: FaInstagram, url: "https://instagram.com/jodtech", label: "Instagram" },
-    { icon: FaWhatsapp, url: "https://wa.me/917867908377", label: "WhatsApp" },
+    { icon: FaWhatsapp, url: "https://wa.me/917338880298", label: "WhatsApp" },
     { icon: FaLinkedin, url: "https://linkedin.com/company/jodtech", label: "LinkedIn" },
   ];
 
   return (
     <footer className={`px-6 py-24 transition-colors duration-500 border-t ${theme === 'dark' ? 'bg-black border-white/5 text-gray-400' : 'bg-white border-black/5 text-black'}`}>
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-20 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-20 mb-24">
 
           {/* JOD TECH SECTION */}
           <div className="lg:col-span-1">
@@ -83,14 +83,14 @@ const Footer = () => {
               </div>
               <div>
                 <p className="text-xs uppercase tracking-widest font-black text-green-600 mb-2">Phone</p>
-                <a href="tel:+917867908377" className={`font-black text-lg transition-colors ${theme === 'dark' ? 'hover:text-green-600' : 'hover:text-green-600'}`}>
-                  +91 7867908377
+                <a href="tel:+917338880298" className={`font-black text-lg transition-colors ${theme === 'dark' ? 'hover:text-green-600' : 'hover:text-green-600'}`}>
+                  +91 7338880298
                 </a>
               </div>
               <div>
                 <p className="text-xs uppercase tracking-widest font-black text-green-600 mb-2">Email</p>
-                <a href="mailto:jodtech11@gmail.com" className={`font-black transition-colors ${theme === 'dark' ? 'hover:text-green-600' : 'hover:text-green-600'}`}>
-                  jodtech11@gmail.com
+                <a href="mailto:support@jodtech.in" className={`font-black transition-colors ${theme === 'dark' ? 'hover:text-green-600' : 'hover:text-green-600'}`}>
+                  support@jodtech.in
                 </a>
               </div>
             </div>
@@ -98,7 +98,7 @@ const Footer = () => {
         </div>
 
         {/* BOTTOM BAR */}
-        <div className={`pt-8 border-t flex flex-col sm:flex-row justify-between items-center gap-6 transition-colors duration-500 ${theme === 'dark' ? 'border-white/5' : 'border-black/5'}`}>
+        <div className={`pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-6 transition-colors duration-500 ${theme === 'dark' ? 'border-white/5' : 'border-black/5'}`}>
           <p className={`font-black text-sm tracking-widest text-center md:text-left ${theme === 'dark' ? 'text-gray-400' : 'text-black'}`}>
             © 2026 JOD TECH — ENGINEERED IN INDIA
           </p>

@@ -12,7 +12,7 @@ const Home = () => {
   const { theme } = useTheme();
 
   return (
-    <div className={`overflow-x-hidden w-full max-w-[100vw] min-h-screen transition-colors duration-500 bg-transparent ${theme === 'dark' ? 'text-green-50' : 'text-green-600'}`}>
+    <div className={`overflow-x-hidden min-h-screen transition-colors duration-500 bg-transparent ${theme === 'dark' ? 'text-green-50' : 'text-green-600'}`}>
 
       {/* ================= HERO SECTION ================= */}
       <HomeHeroBanner theme={theme} />

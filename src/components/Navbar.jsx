@@ -42,18 +42,18 @@ const Navbar = () => {
           >
             <img src={logo} alt="JodTech Logo" className="w-full h-full object-cover" />
           </motion.div>
-          <span className="text-2xl font-black tracking-tighter bg-gradient-to-r from-green-500 to-green-700 bg-clip-text text-transparent">
+          <span className={`text-2xl font-black tracking-tighter ${!scrolled ? 'text-white' : 'bg-gradient-to-r from-green-500 to-green-700 bg-clip-text text-transparent'}`}>
             JodTech
           </span>
         </Link>
 
         {/* DESKTOP MENU */}
-        <ul className={`hidden lg:flex gap-10 text-[15px] font-bold tracking-wide transition-colors duration-300 ${!scrolled ? 'text-gray-200' : theme === 'dark' ? 'text-gray-300' : 'text-green-600'}`}>
+        <ul className={`hidden lg:flex gap-10 text-[15px] font-bold tracking-wide transition-colors duration-300 ${!scrolled ? 'text-white' : theme === 'dark' ? 'text-gray-300' : 'text-green-600'}`}>
           {navLinks.map((link) => (
             <li key={link.path} className="relative group">
               <Link 
                 to={link.path}
-                className={`transition-colors duration-300 ${!scrolled ? 'hover:text-green-50' : 'hover:text-green-600'} ${location.pathname === link.path ? 'text-green-600' : ''}`}
+                className={`transition-colors duration-300 ${!scrolled ? 'hover:text-gray-300' : 'hover:text-green-600'} ${location.pathname === link.path ? (!scrolled ? 'text-white drop-shadow-md' : 'text-green-600') : ''}`}
               >
                 {link.name}
               </Link>
@@ -100,10 +100,10 @@ const Navbar = () => {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className={`fixed top-0 right-0 w-full sm:w-[350px] h-screen z-[60] flex flex-col p-10 pt-28 gap-8 shadow-2xl border-l overflow-x-hidden
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 100 }}
+            className={`fixed top-0 right-0 w-full sm:w-[350px] h-screen z-[60] flex flex-col p-10 pt-28 gap-8 shadow-2xl border-l
             ${theme === 'dark' ? 'bg-black border-white/10 text-green-50' : 'bg-white border-black/5 text-green-600'}`}
           >
             <div 

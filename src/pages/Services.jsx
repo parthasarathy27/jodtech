@@ -42,7 +42,7 @@ const services = [
     desc: "Grow your brand with data-driven strategies.",
     advantage: "Higher reach and conversion rates.",
     tech: "SEO, Ads, Social Media",
-    img: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800",
     icon: <FiTrendingUp />
   },
   {
@@ -50,7 +50,7 @@ const services = [
     desc: "Automate and streamline development workflows.",
     advantage: "Fast deployment and reliability.",
     tech: "AWS, Docker, CI/CD",
-    img: "https://images.unsplash.com/photo-1764557222299-5cce88abe80c?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "https://images.unsplash.com/photo-1600267175161-cfaa711b4a81?q=80&w=800",
     icon: <FiSettings />
   },
   {
@@ -58,7 +58,7 @@ const services = [
     desc: "Manage stock and operations efficiently.",
     advantage: "Real-time tracking and analytics.",
     tech: "Custom ERP",
-    img: "https://images.unsplash.com/photo-1620633759441-b4db8637d1f3?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800",
     icon: <FiDatabase />
   },
   {
@@ -66,7 +66,7 @@ const services = [
     desc: "Smart booking systems for businesses.",
     advantage: "Easy scheduling and automation.",
     tech: "Full-stack solutions",
-    img: "https://images.unsplash.com/photo-1522241112606-b5d35a468795?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "https://images.unsplash.com/photo-1508780709619-79562169bc64?q=80&w=800",
     icon: <FiCalendar />
   },
   {
@@ -74,7 +74,7 @@ const services = [
     desc: "Automate conversations with intelligent bots.",
     advantage: "24/7 support and smart responses.",
     tech: "AI, NLP",
-    img: "https://images.unsplash.com/photo-1716436329836-208bea5a55e6?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800",
     icon: <FiMessageSquare />
   },
   {
@@ -98,7 +98,7 @@ const Services = () => {
         subtitle="Into Digital Impact"
         highlight="Our Capabilities"
         theme={theme}
-        image="https://images.unsplash.com/photo-1594928274321-4497d98e4f48?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        image="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200"
       />
 
       <div className="max-w-7xl mx-auto px-6 py-24 space-y-32">
@@ -119,7 +119,7 @@ const Services = () => {
                 src={service.img}
                 alt={service.title}
                 loading="lazy"
-                className="w-full h-[280px] sm:h-[340px] md:h-[420px] object-cover rounded-[2.5rem] shadow-2xl group-hover:scale-[1.02] transition-transform duration-700 font-bold"
+                className="w-full h-[400px] object-cover rounded-[2.5rem] shadow-2xl group-hover:scale-[1.02] transition-transform duration-700 font-bold"
               />
             </div>
 

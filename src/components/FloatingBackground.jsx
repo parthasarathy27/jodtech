@@ -29,17 +29,17 @@ const FloatingBackground = () => {
       </svg>
 
       {/* 🔹 MOVING BUBBLES ANIMATION */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0">
         {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}
             initial={{ 
-              x: Math.random() * 60 + "%", 
-              y: Math.random() * 60 + "%" 
+              x: Math.random() * 100 + "%", 
+              y: Math.random() * 100 + "%" 
             }}
             animate={{ 
-              x: ["10%", "70%", "10%"], 
-              y: ["10%", "70%", "10%"], 
+              x: ["0%", "100%", "0%"], 
+              y: ["0%", "80%", "0%"], 
               scale: [1, 1.2, 1],
               opacity: [0.3, 0.5, 0.3]
             }}

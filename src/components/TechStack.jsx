@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
-import { motion } from "framer-motion";
 
 const TechStack = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -102,14 +101,14 @@ const TechStack = () => {
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-8 md:mb-16">
+        <div className="flex flex-wrap justify-center gap-3 mb-16">
           {filters.map((filter) => (
             <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
-              className={`px-4 py-2 md:px-5 md:py-2.5 rounded-full font-black text-sm md:text-base transition-all duration-300 ${
+              className={`px-5 py-2.5 rounded-full font-black text-sm md:text-base transition-all duration-300 ${
                 activeFilter === filter.id
-                  ? "bg-green-600 text-white shadow-lg shadow-dg-700/50 scale-105 md:scale-110"
+                  ? "bg-green-600 text-white shadow-lg shadow-dg-700/50 scale-110"
                   : "border-2 border-white text-green-50 hover:bg-white/10"
               }`}
             >
@@ -118,59 +117,31 @@ const TechStack = () => {
           ))}
         </div>
 
-        {/* Mobile View: Horizontal Progress Bars */}
-        <div className="block md:hidden space-y-6">
-          {currentTechs.map((tech, index) => (
-            <motion.div
-              key={tech.name}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white/5 p-4 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300"
-            >
-              <div className="flex justify-between items-center mb-3">
-                <span className="text-green-50 font-black text-lg">{tech.name}</span>
-                <span className="text-green-600 font-bold text-lg">{tech.percentage}%</span>
-              </div>
-              <div className="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
-                <motion.div
-                  initial={{ width: 0 }}
-                  animate={{ width: `${tech.percentage}%` }}
-                  transition={{ duration: 1, delay: index * 0.1, ease: "easeOut" }}
-                  className="bg-gradient-to-r from-green-600 to-green-500 h-full rounded-full shadow-lg"
+        {/* Tech Bars Grid */}
+        <div className={`grid gap-6 md:gap-8 ${activeFilter === 'all' ? 'grid-cols-3 md:grid-cols-5 lg:grid-cols-9' : 'grid-cols-2 md:grid-cols-3 lg:grid-cols-5'}`}>
+          {currentTechs.map((tech) => (
+            <div key={tech.name} className="flex flex-col items-center">
+              {/* Bar Container */}
+              <div className={`${activeFilter === 'all' ? 'w-24 h-48 md:h-56' : 'w-40 h-56 md:h-64'} flex items-end justify-center mb-4 group cursor-pointer`}>
+                {/* Animated Bar */}
+                <div
+                  ref={(el) => (barsRef.current[tech.name] = el)}
+                  className="w-1/3 rounded-lg bg-green-700 transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-green-700/50 origin-bottom"
                 />
-              </div>
-            </motion.div>
-          ))}
-        </div>
 
-        {/* Desktop View: Vertical Bars Grid */}
-        <div className="hidden md:block">
-          <div className={`grid gap-6 md:gap-8 ${activeFilter === 'all' ? 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5' : 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5'}`}>
-            {currentTechs.map((tech) => (
-              <div key={tech.name} className="flex flex-col items-center">
-                {/* Bar Container */}
-                <div className={`${activeFilter === 'all' ? 'w-24 h-48 md:h-56' : 'w-40 h-56 md:h-64'} flex items-end justify-center mb-4 group cursor-pointer`}>
-                  {/* Animated Bar */}
-                  <div
-                    ref={(el) => (barsRef.current[tech.name] = el)}
-                    className="w-1/3 rounded-lg bg-green-700 transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-green-700/50 origin-bottom"
-                  />
-
-                  {/* Percentage on Hover */}
-                  <div className="absolute text-green-600 font-black text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    {tech.percentage}%
-                  </div>
+                {/* Percentage on Hover */}
+                <div className="absolute text-green-600 font-black text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {tech.percentage}%
                 </div>
-
-                {/* Tech Name */}
-                <p className="text-green-50 font-black text-center text-sm md:text-base">{tech.name}</p>
-
-                {/* Percentage Below */}
-                <p className="text-green-600 font-bold text-xs md:text-sm mt-1">{tech.percentage}%</p>
               </div>
-            ))}
-          </div>
+
+              {/* Tech Name */}
+              <p className="text-green-50 font-black text-center text-sm md:text-base">{tech.name}</p>
+
+              {/* Percentage Below */}
+              <p className="text-green-600 font-bold text-xs md:text-sm mt-1">{tech.percentage}%</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
