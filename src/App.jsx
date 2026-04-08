@@ -12,6 +12,7 @@ import Footer from "./pages/Footer";
 import ScrollToTop from "./components/Scrollertop";
 import Apply from "./pages/Apply";
 import Products from "./pages/Products";
+import Templates from "./pages/Templates";
 import NewArrivals from "./pages/NewArrivals";
 import ScrollActionButton from "./components/ScrollActionButton";
 import FloatingBackground from "./components/FloatingBackground";
@@ -55,6 +56,7 @@ const AppContent = () => {
           <Route path="/about" element={<PageWrapper><WhoWeAre /></PageWrapper>} />
           <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
           <Route path="/products" element={<PageWrapper><Products /></PageWrapper>} />
+          <Route path="/templates" element={<PageWrapper><Templates /></PageWrapper>} />
           <Route path="/new" element={<PageWrapper><NewArrivals /></PageWrapper>} />
           <Route path="/careers" element={<PageWrapper><Careers /></PageWrapper>} />
           <Route path="/quote" element={<PageWrapper><GetQuote /></PageWrapper>} />

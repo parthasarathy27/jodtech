@@ -93,6 +93,16 @@ const ApplicationSchema = new mongoose.Schema({
 });
 const Application = mongoose.models.Application || mongoose.model("Application", ApplicationSchema);
 
+const TemplateOrderSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  email: { type: String, required: true },
+  phone: { type: String, required: true },
+  templateCategory: { type: String, required: true },
+  message: { type: String },
+  createdAt: { type: Date, default: Date.now }
+});
+const TemplateOrder = mongoose.models.TemplateOrder || mongoose.model("TemplateOrder", TemplateOrderSchema);
+
 // =================== EMAIL TRANSPORTER ===================
 const transporter = nodemailer.createTransport({
   service: "gmail",
@@ -248,6 +258,37 @@ app.post("/api/apply", upload.single("resume"), async (req, res) => {
     res.status(201).json({ success: true, message: "Application submitted successfully!", resumeUrl });
   } catch (error) {
     console.error("Application Submission Error:", error);
+    res.status(500).json({ success: false, message: "Database Error: " + error.message });
+  }
+});
+
+// Route: Submit a Template Selection
+app.post("/api/templates/select", async (req, res) => {
+  try {
+    await connectDB();
+    const { name, email, phone, templateCategory, message } = req.body;
+    
+    // Save to Database
+    const newOrder = new TemplateOrder({ name, email, phone, templateCategory, message });
+    await newOrder.save();
+
+    // Send Email notification
+    const emailHtml = `
+      <h2>✨ New Template Selection Request</h2>
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Phone:</strong> ${phone}</p>
+      <p><strong>Selected Category:</strong> ${templateCategory}</p>
+      <p><strong>Message/Requirements:</strong></p>
+      <blockquote style="border-left: 4px solid #f39c12; padding-left: 10px; color: #555;">
+        ${message || "No specific requirements provided."}
+      </blockquote>
+    `;
+    await sendEmailNotification(`✨ Template Selection: ${templateCategory} from ${name}`, emailHtml);
+
+    res.status(201).json({ success: true, message: "Selection submitted successfully!" });
+  } catch (error) {
+    console.error("Template Selection Error:", error);
     res.status(500).json({ success: false, message: "Database Error: " + error.message });
   }
 });

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "../context/ThemeContext";
 import HeroBanner from "../components/HeroBanner";
-import { FiGlobe, FiSmartphone, FiLayers, FiExternalLink } from "react-icons/fi";
+import { FiGlobe, FiSmartphone, FiLayers, FiExternalLink, FiLayout } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 const productCategories = [
@@ -14,7 +14,24 @@ const productCategories = [
   {
     category: "Website",
     icon: <FiGlobe />,
-    demos: []
+    demos: [
+      {
+        id: "tpl-web-client",
+        title: "Website Clients",
+        desc: "Portfolio of specialized websites delivered to our global clients. (Coming Soon)",
+        img: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop",
+        link: "/about#clients",
+        external: false
+      },
+      {
+        id: "tpl-web-demo",
+        title: "Website Demos",
+        desc: "Industry-specific website templates and interactive demos. (Coming Soon)",
+        img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
+        link: "/templates#website",
+        external: false
+      }
+    ]
   },
   {
     category: "Software",
@@ -75,7 +92,7 @@ const Products = () => {
             className="w-full"
           >
             <h2 className="text-3xl md:text-4xl font-black mb-12 text-center text-green-600">
-              {productCategories[activeCategory].category} Templates
+              {productCategories[activeCategory].category}
             </h2>
 
             {activeDemos.length > 0 ? (
