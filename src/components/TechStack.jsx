@@ -146,7 +146,7 @@ const TechStack = () => {
 
         {/* Desktop View: Vertical Bars Grid */}
         <div className="hidden md:block">
-          <div className={`grid gap-6 md:gap-8 ${activeFilter === 'all' ? 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5' : 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5'}`}>
+          <div className="flex flex-wrap justify-center gap-6 md:gap-10">
             {currentTechs.map((tech) => (
               <div key={tech.name} className="flex flex-col items-center">
                 {/* Bar Container */}
